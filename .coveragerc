@@ -1,0 +1,3 @@
+[run]
+source = twitter_for_partoo
+omit = twitter_for_partoo/test*
