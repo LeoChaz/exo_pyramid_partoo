@@ -18,11 +18,10 @@ api = TwitterAPI(CONSUMER_KEY,
                  proxy_url=None)
 
 
-
 @view_config(route_name='home', renderer='templates/mytemplate.pt')
 def my_view(request):
 
-    #Get last 10 tweets on my timeline
+    # Get last 10 tweets on my timeline
     tweets = api.request('statuses/home_timeline', {'count':10})
 
     return {'project': 'twitter_for_partoo', 'tweets': tweets}
